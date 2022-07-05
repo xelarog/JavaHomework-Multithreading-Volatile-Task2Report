@@ -30,11 +30,13 @@ public class Main {
     }
 
     private static int[] fillArrayRandom(int number) {
+        final int min = 30;
+        final int range = 20_000;
 
         Random random = new Random();
         int[] array = new int[number];
         for (int i = 0; i < number; i++) {
-            array[i] = random.nextInt(20_000) + 30;
+            array[i] = random.nextInt(range) + min;
         }
         return array;
     }
