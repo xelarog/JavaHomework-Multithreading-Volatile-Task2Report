@@ -10,10 +10,14 @@ public class ReportForTaxService {
 
     public void compute(int[] earning) {
         IntStream.of(earning).forEach(i -> totalEarning.add(i));
+    }
+
+    public void makeSum() {
         totalEarning.sum();
     }
 
     public LongAdder getTotalEarning() {
         return totalEarning;
     }
+
 }
